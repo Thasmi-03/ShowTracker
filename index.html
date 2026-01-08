@@ -4,378 +4,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>ShowTrackr - Track Your Favorite Shows</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./css/index.css">
-
-
-  <style>
-    body {
-      background: rgb(208, 213, 218);
-      /* color: #fff; */
-      min-height: 100vh;
-      padding-bottom: 50px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header Styles */
-    header {
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(10px);
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-
-
-    .logo i {
-      margin-right: 8px;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 5px;
-    }
-
-    .btn {
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn-login {
-      background: transparent;
-      border: 2px solid #e94560;
-      color: #e94560;
-    }
-
-    .btn-login:hover {
-      background: #e94560;
-      color: white;
-    }
-
-    .btn-signup {
-      background: #e94560;
-      border: 2px solid #e94560;
-      color: white;
-    }
-
-    .btn-signup:hover {
-      background: #ff2e63;
-      border-color: #ff2e63;
-    }
-
-    /* Alphabet Filter */
-    .alphabet-filter {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1px;
-      margin: 2px 0;
-      padding: 8px;
-      text-align: center;
-      color: black;
-
-    }
-
-    a {
-      color: black;
-    }
-
-    .alphabet-btn {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      /* border-radius: 8px; */
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .alphabet-btn:hover {
-      background: #e94560;
-      transform: translateY(-3px);
-    }
-
-    /* Genre Filter */
-    .genre-filter {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: left;
-      gap: 2px;
-      margin: 1px;
-      padding: 1px;
-    }
-
-    .genre-btn {
-      padding: 2px 10px;
-      background-color: rgba(233, 228, 228, 0.76);
-      color: rgb(105, 105, 105);
-      border-radius: 5px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .genre-btn:hover {
-      background: #e0e3e8c0;
-    }
-
-
-    .card {
-      border: none;
-    }
-
-    .show-episodes {
-      color: #a9a9a9;
-      font-size: 14px;
-    }
-
-    p {
-      margin: 0px;
-      padding: 0px;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- Navigation Start -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <a class="navbar-brand p-3" href="detail.html"><mark
-        style="background-color: yellow; padding: 20px">Show<b>Trackr</b></mark></a>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
-        <li class="nav-item">
-          <button class="link">
-            <a class="nav-link" class="fw-lighter" aria-current="page" href="index.html">Home</a>
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="link">
-            <a class="nav-link" href="add.html">Add</a>
-          </button>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <button class="link">
-          <a href="login.html" class="fw-lighter">Login</a>
-        </button>
-        <button class="link">
-          <a href="Signup.html" class="fw-lighter">Sign up</a>
-        </button>
-      </form>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <span class="text-primary">Show</span><span class="text-white">Trackr</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add.html">Add Show</a>
+          </li>
+        </ul>
+        <form class="d-flex gap-2" role="search">
+          <a href="login.html" class="btn btn-outline-light rounded-pill px-4 btn-sm">Login</a>
+          <a href="Signup.html" class="btn btn-primary rounded-pill px-4 btn-sm">Sign Up</a>
+        </form>
+      </div>
     </div>
   </nav>
-  <!-- End Navigation -->
-  <div class="container">
-    <!-- Alphabet Filter -->
-    <div class="alphabet-filter">
-      <h5>0-9
-        <a href="#" class="alpha-btn">A</a>
-        <a href="#" class="alpha-btn">B</a>
-        <a href="#" class="alpha-btn">C</a>
-        <a href="#" class="alpha-btn">D</a>
-        <a href="#" class="alpha-btn">E</a>
-        <a href="#" class="alpha-btn">F</a>
-        <a href="#" class="alpha-btn">G</a>
-        <a href="#" class="alpha-btn">H</a>
-        <a href="#" class="alpha-btn">I</a>
-        <a href="#" class="alpha-btn">J</a>
-        <a href="#" class="alpha-btn">K</a>
-        <a href="#" class="alpha-btn">L</a>
-        <a href="#" class="alpha-btn">M</a>
-        <a href="#" class="alpha-btn">N</a>
-        <a href="#" class="alpha-btn">O</a>
-        <a href="#" class="alpha-btn">P</a>
-        <a href="#" class="alpha-btn">Q</a>
-        <a href="#" class="alpha-btn">R</a>
-        <a href="#" class="alpha-btn">S</a>
-        <a href="#" class="alpha-btn">T</a>
-        <a href="#" class="alpha-btn">U</a>
-        <a href="#" class="alpha-btn">V</a>
-        <a href="#" class="alpha-btn">W</a>
-        <a href="#" class="alpha-btn">X</a>
-        <a href="#" class="alpha-btn">Y</a>
-        <a href="#" class="alpha-btn">Z</a>
-      </h5>
 
+  <!-- Hero Section (Optional, improves UX) -->
+  <div class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div>
+      <h1 class="display-4 fw-bold mb-3">Track Your Binge</h1>
+      <p class="lead mb-4">Discover, track, and manage your favorite TV shows in one place.</p>
+    </div>
+  </div>
+
+  <div class="container main-content">
+    
+    <!-- Filters Section -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-12">
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-4 filter-container">
+          <button class="btn btn-sm btn-outline-secondary genre-btn active" data-genre="All">All</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Action">Action</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Adventure">Adventure</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Animation">Animation</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Comedy">Comedy</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Crime">Crime</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Drama">Drama</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Family">Family</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Fantasy">Fantasy</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Horror">Horror</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Romance">Romance</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Sci-fi">Sci-fi</button>
+          <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Thriller">Thriller</button>
+        </div>
+        
+        <div class="alphabet-filter d-flex flex-wrap justify-content-center gap-1 mb-4">
+            <a href="#" class="alpha-btn">A</a>
+            <a href="#" class="alpha-btn">B</a>
+            <a href="#" class="alpha-btn">C</a>
+            <a href="#" class="alpha-btn">D</a>
+            <a href="#" class="alpha-btn">E</a>
+            <a href="#" class="alpha-btn">F</a>
+            <a href="#" class="alpha-btn">G</a>
+            <a href="#" class="alpha-btn">H</a>
+            <a href="#" class="alpha-btn">I</a>
+            <a href="#" class="alpha-btn">J</a>
+            <a href="#" class="alpha-btn">K</a>
+            <a href="#" class="alpha-btn">L</a>
+            <a href="#" class="alpha-btn">M</a>
+            <a href="#" class="alpha-btn">N</a>
+            <a href="#" class="alpha-btn">O</a>
+            <a href="#" class="alpha-btn">P</a>
+            <a href="#" class="alpha-btn">Q</a>
+            <a href="#" class="alpha-btn">R</a>
+            <a href="#" class="alpha-btn">S</a>
+            <a href="#" class="alpha-btn">T</a>
+            <a href="#" class="alpha-btn">U</a>
+            <a href="#" class="alpha-btn">V</a>
+            <a href="#" class="alpha-btn">W</a>
+            <a href="#" class="alpha-btn">X</a>
+            <a href="#" class="alpha-btn">Y</a>
+            <a href="#" class="alpha-btn">Z</a>
+        </div>
+      </div>
     </div>
 
-    <!-- Genre Filter -->
-
-    <div class="genre-filter">
-      <div class="genre-btn" data-genre="Action">Action</div>
-      <div class="genre-btn" data-genre="Adventure">Adventure</div>
-      <div class="genre-btn" data-genre="Animation">Animation</div>
-      <div class="genre-btn" data-genre="Children">Children</div>
-      <div class="genre-btn" data-genre="Comedy">Comedy</div>
-      <div class="genre-btn" data-genre="Crime">Crime</div>
-      <div class="genre-btn" data-genre="Documentary">Documentary</div>
-      <div class="genre-btn" data-genre="Drama">Drama</div>
-      <div class="genre-btn" data-genre="Family">Family</div>
-      <div class="genre-btn" data-genre="Fantasy">Fantasy</div>
-      <div class="genre-btn" data-genre="Food">Food</div>
-      <div class="genre-btn" data-genre="Home and Garden">Home and Garden</div>
-      <div class="genre-btn" data-genre="Horror">Horror</div>
-      <div class="genre-btn" data-genre="Mini-Series">Mini-Series</div>
-      <div class="genre-btn" data-genre="Mystery">Mystery</div>
-      <div class="genre-btn" data-genre="News">News</div>
-      <div class="genre-btn" data-genre="Reality">Reality</div>
-      <div class="genre-btn" data-genre="Romance">Romance</div>
-      <div class="genre-btn" data-genre="Sci-fi">Sci-fi</div>
-      <div class="genre-btn" data-genre="Sport">Sport</div>
-      <div class="genre-btn" data-genre="Suspense">Suspense</div>
-      <div class="genre-btn" data-genre="Talk Show">Talk Show</div>
-      <div class="genre-btn" data-genre="Thriller">Thriller</div>
-      <div class="genre-btn" data-genre="Travel">Travel</div>
-    </div>
-
-
-
-    <div class="total">
-
-      <!-- Search Bar -->
-      <div class="card-header">
-        <b>TOP 12 SHOWS</b>
-        <input type="text" name="text" id="enter-text" placeholder="Search...">
+    <!-- Search & Content -->
+    <div class="content-wrapper p-4 rounded-3 shadow-lg glass-panel">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-column flex-md-row gap-3">
+        <h3 class="text-white m-0">Top Shows</h3>
+        <div class="search-box">
+           <i class="bi bi-search text-muted position-absolute ms-3 mt-2 pt-1"></i>
+           <input type="text" id="enter-text" class="form-control rounded-pill ps-5 bg-dark text-white border-secondary" placeholder="Search shows...">
+        </div>
       </div>
 
-      <div class="card-body" id="card-align">
-        <div class="card-group gap-2">
-          <!-- Game of Thrones -->
-          <div class="card" data-genre="Drama,Adventure" data-name="G">
-            <img src="./asset/game.jpeg" class="card-img-top" alt="Game of Thrones">
-            <div class="card-body">
-              <p><b>Game of Thrones</b></p>
-              <p>Episodes: 84</p>
-            </div>
-          </div>
+      <div id="card-align" class="card-container">
+        <!-- JS will populate cards here -->
+      </div>
+    </div>
 
-          <!-- Breaking Bad -->
-          <div class="card" data-genre="Crime,Drama" data-name="B">
-            <img src="./asset/bad.jpg" class="card-img-top" alt="Breaking Bad">
-            <div class="card-body">
-              <p><b>Breaking Bad</b></p>
-              <p>Episodes: 79</p>
-            </div>
-          </div>
+  </div>
 
-          <!-- Dexter -->
-          <div class="card" data-genre="Crime ,Thriller" data-name="D">
-            <img src="./asset/dexter.jpg" class="card-img-top" alt="Dexter">
-            <div class="card-body">
-              <p><b>Dexter</b></p>
-              <p>Episodes: 125</p>
-            </div>
-          </div>
+  <footer class="text-center text-secondary py-4 mt-5">
+    <p>&copy; 2024 ShowTrackr. All rights reserved.</p>
+  </footer>
 
-          <!-- How I Met Your Mother -->
-          <div class="card" data-genre="Comedy" data-name="H">
-            <img src="./asset/mother.jpeg" class="card-img-top" alt="How I Met Your Mother">
-            <div class="card-body">
-              <p><b>How I Met Your Mother</b></p>
-              <p>Episodes: 219</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-group gap-2">
-          <!-- Kadhaipoma -->
-          <div class="card" data-genre="Drama" data-name="K">
-            <img src="./asset/kathaippoma.jpeg" class="card-img-top" alt="Kadhaipoma">
-            <div class="card-body">
-              <p><b>Kadhaipoma</b></p>
-              <p>Episodes: 12</p>
-            </div>
-          </div>
-
-          <!-- Kalluri Saalai -->
-          <div class="card" data-genre="Mini-Series" data-name="K">
-            <img src="./asset/kalluri.jpeg" class="card-img-top" alt="Kalluri Saalai">
-            <div class="card-body">
-              <p><b>Kalluri Saalai</b></p>
-              <p>Episodes: 10</p>
-            </div>
-          </div>
-
-          <!-- Train to Busan -->
-          <div class="card" data-genre="Horror" data-name="T">
-            <img src="./asset/train.jpeg" class="card-img-top" alt="Train to Busan">
-            <div class="card-body">
-              <p><b>Train to Busan</b></p>
-              <p>Episodes: 01</p>
-            </div>
-          </div>
-
-          <!-- Manathili Ninraval -->
-          <div class="card" data-genre="Romance" data-name="M">
-            <img src="./asset/manathili.jpeg" class="card-img-top" alt="Manathili Ninraval">
-            <div class="card-body">
-              <p><b>Manathili Ninraval</b></p>
-              <p>Episodes: 02</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-group gap-2">
-          <!-- Radsasan -->
-          <div class="card" data-genre="Thriller" data-name="R">
-            <img src="./asset/radsasan.jpeg" class="card-img-top" alt="Radsasan">
-            <div class="card-body">
-              <p><b>Radsasan</b></p>
-              <p>Episodes: 123</p>
-            </div>
-          </div>
-
-          <!-- M.S. Dhoni: The Untold Story -->
-          <div class="card" data-genre="Sport" data-name="M">
-            <img src="./asset/ms.png" class="card-img-top" alt="ms">
-            <div class="card-body">
-              <p><b>M.S. Dhoni: The Untold Story </b></p>
-              <p>Episodes: 16</p>
-            </div>
-          </div>
-
-          <!-- Hello -->
-          <div class="card" data-genre="Romance" data-name="H">
-            <img src="./asset/hello.png" class="card-img-top" alt="Hello">
-            <div class="card-body">
-              <p><b>Hello</b></p>
-              <p>Episodes: 21</p>
-            </div>
-          </div>
-
-          <!-- Minmini -->
-          <div class="card" data-genre="Children,Family,Animation,Adventure" data-name="M">
-            <img src="./asset/minmini.png" class="card-img-top" alt="Minmini">
-            <div class="card-body">
-              <p><b>Minmini</b></p>
-              <p>Episodes: 01</p>
-            </div>
-          </div>
-
-
-        </div>
-        <script src="js/index .js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
