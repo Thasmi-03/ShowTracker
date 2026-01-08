@@ -4,93 +4,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add Page</title>
+  <title>Add Show - ShowTrackr</title>
 
   <!-- Bootstrap CDN link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/add.css" />
 </head>
 
 <body>
-  <!-- Navigation Start -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <a class="navbar-brand p-3" href="detail.html"><mark
-        style="background-color: yellow; padding: 20px">Show<b>Trackr</b></mark></a>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
-        <li class="nav-item">
-          <button class="link">
-            <a class="nav-link" class="fw-lighter" aria-current="page" href="index.html">Home</a>
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="link">
-            <a class="nav-link" href="add.html">Add</a>
-          </button>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <button class="link">
-          <a href="login.html" class="fw-lighter">Login</a>
-        </button>
-        <button class="link">
-          <a href="Signup.html" class="fw-lighter">Sign up</a>
-        </button>
-      </form>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        Show<b>Trackr</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="add.html">Add Show</a>
+          </li>
+        </ul>
+        <form class="d-flex gap-2" role="search">
+          <a href="login.html" class="btn btn-outline-light rounded-pill px-4 btn-sm">Login</a>
+          <a href="Signup.html" class="btn btn-primary rounded-pill px-4 btn-sm">Sign Up</a>
+        </form>
+      </div>
     </div>
   </nav>
-  <!-- End Navigation -->
 
-  <div class="card">
-    <div class="card-header">ADD TV SHOWS</div>
-    <div class="card-body">
-      <form action="">
-        <label for="add-movie" class="movie-name my-3">Name</label>
-        <input type="text" id="tvShowName" placeholder="Enter TV show Name" class="form-control mb-3" />
+  <div class="container page-content">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="glass-panel p-4 mb-5">
+          <h2 class="mb-4 border-bottom border-secondary pb-3">Add New Show</h2>
 
-        <label for="tvShowGenre" class="movie-name my-3">Genre</label>
-        <select id="tvShowGenre" class="form-control mb-3">
-          <option value="Action">Action</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Comedy">Comedy</option>
-          <option value="Crime">Crime</option>
-          <option value="Drama">Drama</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Horror">Horror</option>
-          <option value="Romance">Romance</option>
-          <option value="Sci-fi">Sci-fi</option>
-          <option value="Thriller">Thriller</option>
-        </select>
+          <form action="" id="addShowForm">
+            <div class="mb-3">
+              <label for="tvShowName" class="form-label text-secondary">Show Name</label>
+              <input type="text" id="tvShowName" placeholder="Enter TV show Name" class="form-control" />
+            </div>
 
-        <label for="tvShowEpisodes" class="movie-name my-3">Episodes</label>
-        <input type="number" id="tvShowEpisodes" placeholder="Enter number of episodes" class="form-control mb-3" />
+            <div class="mb-3">
+              <label for="tvShowGenre" class="form-label text-secondary">Genre</label>
+              <select id="tvShowGenre" class="form-control form-select">
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Crime">Crime</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-fi">Sci-fi</option>
+                <option value="Thriller">Thriller</option>
+              </select>
+            </div>
 
-        <label for="tvShowRating" class="movie-name my-3">Rating</label>
-        <input type="number" id="tvShowRating" placeholder="Enter rating (e.g., 9.5)" step="0.1"
-          class="form-control mb-3" />
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="tvShowEpisodes" class="form-label text-secondary">Episodes</label>
+                <input type="number" id="tvShowEpisodes" placeholder="e.g. 12" class="form-control" />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="tvShowRating" class="form-label text-secondary">Rating</label>
+                <input type="number" id="tvShowRating" placeholder="e.g. 9.5" step="0.1" class="form-control" />
+              </div>
+            </div>
 
-        <label for="tvShowSchedule" class="movie-name my-3">Schedule</label>
-        <input type="text" id="tvShowSchedule" placeholder="e.g., Sunday 9:00 PM on HBO" class="form-control mb-3" />
+            <div class="mb-3">
+              <label for="tvShowSchedule" class="form-label text-secondary">Schedule</label>
+              <input type="text" id="tvShowSchedule" placeholder="e.g., Sunday 9:00 PM on HBO" class="form-control" />
+            </div>
 
-        <label for="tvShowDescription" class="movie-name my-3">Description</label>
-        <textarea id="tvShowDescription" placeholder="Enter show description" class="form-control mb-3"
-          rows="3"></textarea>
+            <div class="mb-3">
+              <label for="tvShowDescription" class="form-label text-secondary">Description</label>
+              <textarea id="tvShowDescription" placeholder="Enter show description" class="form-control"
+                rows="3"></textarea>
+            </div>
 
-        <label for="tvShowImage" class="movie-name my-3">Image</label>
-        <input type="file" id="tvShowImage" class="form-control mb-3" accept="image/*" />
+            <div class="mb-4">
+              <label for="tvShowImage" class="form-label text-secondary">Cover Image</label>
+              <input type="file" id="tvShowImage" class="form-control" accept="image/*" />
+            </div>
 
-        <div id="messageDisplay" class="message"></div>
-        <button type="button" id="addTvShowBtn" class="btn btn-primary mb-3">
-          Add
-        </button>
-      </form>
+            <div id="messageDisplay" class="message mb-3"></div>
+
+            <div class="d-grid gap-2">
+              <button type="button" id="addTvShowBtn" class="btn btn-primary btn-lg">Add Show</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- JS CDN link -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="js/add.js"></script>
 </body>

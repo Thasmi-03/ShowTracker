@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShowTrackr - Track Your Favorite Shows</title>
   <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -17,9 +19,10 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top glass-nav">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">
-        <span class="text-primary">Show</span><span class="text-white">Trackr</span>
+        Show<b>Trackr</b>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
@@ -39,16 +42,16 @@
     </div>
   </nav>
 
-  <!-- Hero Section (Optional, improves UX) -->
+  <!-- Hero Section -->
   <div class="hero-section text-center text-white d-flex align-items-center justify-content-center">
     <div>
-      <h1 class="display-4 fw-bold mb-3">Track Your Binge</h1>
-      <p class="lead mb-4">Discover, track, and manage your favorite TV shows in one place.</p>
+      <h1 class="display-3 fw-bold mb-3">Track Your Binge</h1>
+      <p class="lead mb-4">Discover, track, and manage your favorite TV shows.</p>
     </div>
   </div>
 
   <div class="container main-content">
-    
+
     <!-- Filters Section -->
     <div class="row g-4 mb-5">
       <div class="col-md-12">
@@ -67,34 +70,34 @@
           <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Sci-fi">Sci-fi</button>
           <button class="btn btn-sm btn-outline-secondary genre-btn" data-genre="Thriller">Thriller</button>
         </div>
-        
+
         <div class="alphabet-filter d-flex flex-wrap justify-content-center gap-1 mb-4">
-            <a href="#" class="alpha-btn">A</a>
-            <a href="#" class="alpha-btn">B</a>
-            <a href="#" class="alpha-btn">C</a>
-            <a href="#" class="alpha-btn">D</a>
-            <a href="#" class="alpha-btn">E</a>
-            <a href="#" class="alpha-btn">F</a>
-            <a href="#" class="alpha-btn">G</a>
-            <a href="#" class="alpha-btn">H</a>
-            <a href="#" class="alpha-btn">I</a>
-            <a href="#" class="alpha-btn">J</a>
-            <a href="#" class="alpha-btn">K</a>
-            <a href="#" class="alpha-btn">L</a>
-            <a href="#" class="alpha-btn">M</a>
-            <a href="#" class="alpha-btn">N</a>
-            <a href="#" class="alpha-btn">O</a>
-            <a href="#" class="alpha-btn">P</a>
-            <a href="#" class="alpha-btn">Q</a>
-            <a href="#" class="alpha-btn">R</a>
-            <a href="#" class="alpha-btn">S</a>
-            <a href="#" class="alpha-btn">T</a>
-            <a href="#" class="alpha-btn">U</a>
-            <a href="#" class="alpha-btn">V</a>
-            <a href="#" class="alpha-btn">W</a>
-            <a href="#" class="alpha-btn">X</a>
-            <a href="#" class="alpha-btn">Y</a>
-            <a href="#" class="alpha-btn">Z</a>
+          <a href="#" class="alpha-btn">A</a>
+          <a href="#" class="alpha-btn">B</a>
+          <a href="#" class="alpha-btn">C</a>
+          <a href="#" class="alpha-btn">D</a>
+          <a href="#" class="alpha-btn">E</a>
+          <a href="#" class="alpha-btn">F</a>
+          <a href="#" class="alpha-btn">G</a>
+          <a href="#" class="alpha-btn">H</a>
+          <a href="#" class="alpha-btn">I</a>
+          <a href="#" class="alpha-btn">J</a>
+          <a href="#" class="alpha-btn">K</a>
+          <a href="#" class="alpha-btn">L</a>
+          <a href="#" class="alpha-btn">M</a>
+          <a href="#" class="alpha-btn">N</a>
+          <a href="#" class="alpha-btn">O</a>
+          <a href="#" class="alpha-btn">P</a>
+          <a href="#" class="alpha-btn">Q</a>
+          <a href="#" class="alpha-btn">R</a>
+          <a href="#" class="alpha-btn">S</a>
+          <a href="#" class="alpha-btn">T</a>
+          <a href="#" class="alpha-btn">U</a>
+          <a href="#" class="alpha-btn">V</a>
+          <a href="#" class="alpha-btn">W</a>
+          <a href="#" class="alpha-btn">X</a>
+          <a href="#" class="alpha-btn">Y</a>
+          <a href="#" class="alpha-btn">Z</a>
         </div>
       </div>
     </div>
@@ -104,8 +107,9 @@
       <div class="d-flex justify-content-between align-items-center mb-4 flex-column flex-md-row gap-3">
         <h3 class="text-white m-0">Top Shows</h3>
         <div class="search-box">
-           <i class="bi bi-search text-muted position-absolute ms-3 mt-2 pt-1"></i>
-           <input type="text" id="enter-text" class="form-control rounded-pill ps-5 bg-dark text-white border-secondary" placeholder="Search shows...">
+          <i class="bi bi-search text-muted position-absolute ms-3 mt-2 pt-1"></i>
+          <input type="text" id="enter-text" class="form-control rounded-pill ps-5 bg-dark text-white border-secondary"
+            placeholder="Search shows...">
         </div>
       </div>
 
@@ -120,7 +124,9 @@
     <p>&copy; 2024 ShowTrackr. All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
 </body>
 

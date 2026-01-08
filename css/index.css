@@ -1,38 +1,39 @@
-:root {
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --accent-color: #3b82f6; /* Modern Blue */
-  --accent-hover: #2563eb;
-  --danger-color: #ef4444;
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-primary);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  min-height: 100vh;
-}
-
-/* Glassmorphism Navigation */
-.glass-nav {
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
 /* Hero Section */
 .hero-section {
-  height: 400px;
-  background: linear-gradient(rgba(15, 23, 42, 0.8), var(--bg-color)), url('../asset/game.jpeg');
-  background-size: cover;
-  background-position: center;
-  margin-bottom: -100px; /* Overlap effect */
+  position: relative;
+  height: 500px;
+  /* Background handled by pseudo-elements for blur effect */
+  margin-bottom: -50px;
   padding-top: 60px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Blurred Image */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../asset/hero_bg_blur.png') no-repeat center center/cover;
+  filter: blur(8px);
+  z-index: -2;
+  transform: scale(1.1);
+  /* Remove white edges from blur */
+}
+
+/* Gradient Overlay */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(15, 23, 42, 0.4), var(--bg-color));
+  z-index: -1;
 }
 
 /* Main Content Area */
@@ -55,7 +56,8 @@ body {
   border-color: var(--glass-border);
 }
 
-.genre-btn:hover, .genre-btn.active {
+.genre-btn:hover,
+.genre-btn.active {
   background-color: var(--accent-color);
   color: white;
   border-color: var(--accent-color);
@@ -72,7 +74,8 @@ body {
   border-radius: 4px;
 }
 
-.alphabet-filter .alpha-btn:hover, .alphabet-filter .alpha-btn.active {
+.alphabet-filter .alpha-btn:hover,
+.alphabet-filter .alpha-btn.active {
   color: var(--accent-color);
   background: rgba(59, 130, 246, 0.1);
 }
@@ -158,8 +161,15 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .show-card {
@@ -171,7 +181,7 @@ body {
   .hero-section {
     height: 300px;
   }
-  
+
   .card-group-custom {
     grid-template-columns: repeat(2, 1fr);
   }
